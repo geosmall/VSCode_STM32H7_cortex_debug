@@ -1,0 +1,72 @@
+// Name ${workspaceRoot} folder path names to your project, also the defines for your MCU
+// Set paths to arm-none-eabi libraries as it is installed on your system
+{
+    "env": {
+        "myIncludePath":
+        ["${workspaceFolder}/Core/Inc",
+         "${workspaceFolder}/Core/Src",
+         "${workspaceFolder}/Drivers/STM32H7xx_HAL_Driver/Inc",
+         "${workspaceFolder}/Drivers/STM32H7xx_HAL_Driver/Src",
+         "${workspaceFolder}/Drivers/CMSIS/Device/ST/STM32H7xx/Include",
+         "${workspaceFolder}/Drivers/CMSIS/Include"
+        ],
+    },
+    "configurations": [
+        {
+            "name": "Linux STM32",
+            "includePath":
+            [
+                "${workspaceFolder}/**",
+                "/nix/store/myxgarp0ymi01bmw28fsrs095nx8rr7w-gcc-arm-embedded-10.2.1/**"
+            ],
+            "defines":
+            [
+                "USE_HAL_DRIVER",
+                "STM32F407xx"
+            ],
+            "intelliSenseMode": "linux-gcc-arm",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "browse":
+            {
+                "path":
+                [
+                    "${workspaceFolder}/**",
+                    "/nix/store/myxgarp0ymi01bmw28fsrs095nx8rr7w-gcc-arm-embedded-10.2.1/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            }
+        },
+        {
+            "name": "Windows STM32",
+            "includePath":
+            [
+                "${workspaceFolder}/**",
+                "${myIncludePath}",
+                "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2020-q4-major/**",
+                "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2020-q4-major/arm-none-eabi/include",
+            ],
+            "compilerPath": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2020-q4-major/bin/arm-none-eabi-g++.exe",
+            "defines":
+            [
+                "USE_HAL_DRIVER",
+                "STM32H743xx"
+            ],
+            "intelliSenseMode": "gcc-arm",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "browse":
+            {
+                "path":
+                [
+                    "${workspaceFolder}/**",
+                    "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2020-q4-major/**"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4
+}
